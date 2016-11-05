@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HackatonSeducAluno.LoginPage">
+	<ContentPage.Content>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<!-- LOGO DO ESTADO-->
+				<RowDefinition Height="Auto"/>
+				<!--lOGIN -->
+				<RowDefinition Height="Auto"/>
+				<!-- Senha -->
+				<RowDefinition Height="Auto"/>
+				<!-- Botoes -->
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			<Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="Logo_Mato_Grosso" />
+			<Entry Grid.Row="1" x:Name="EntradaDeLogin" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Login" />
+			<Entry Grid.Row="2" x:Name="EntradaDeSenha" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Senha"/>
+			<Button Grid.Row="3" Grid.Column="0" Text="Limpar"/>
+			<Button Grid.Row="3" Grid.Column="1" Text="Entrar" />
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>
+

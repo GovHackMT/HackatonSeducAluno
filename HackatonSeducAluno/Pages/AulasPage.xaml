@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:HackatonSeducAluno" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HackatonSeducAluno.AulasPage">
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical" >
+			<Label Text="Lista de aulas do dia" FontSize="30"/>
+			<local:BindableListView x:Name="ListaDeAulas" ItemClickedCommand="{Binding AdvancePageCommand}" >
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<Grid Padding="5">
+									<Grid.RowDefinitions>
+										<RowDefinition Height="Auto"/>
+										<RowDefinition Height="Auto"/>
+									</Grid.RowDefinitions>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="Auto"/>
+										<ColumnDefinition Width="*"/>
+									</Grid.ColumnDefinitions>
+									<Label Grid.Row="0" Text="NOME DA MATÉRIA" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center" />
+									<Label Grid.Row="1" Text="NOME DO PROFESSOR" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center" />
+								</Grid>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</local:BindableListView >
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
