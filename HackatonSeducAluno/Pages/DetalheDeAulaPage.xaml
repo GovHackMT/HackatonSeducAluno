@@ -1,24 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HackatonSeducAluno.DetalheDeAulaPage">
 	<ContentPage.Content>
-		<Grid>
+		<Grid Padding="15" >
 			<Grid.RowDefinitions>
-				<!--Nome da matéria-->
+				<!--0 Nome da matéria-->
 				<RowDefinition Height="Auto"/>
-				<!--Nome do professor-->
+				<!--1 Nome do professor-->
 				<RowDefinition Height="Auto"/>
-				<!--horário-->
+				<!--2 horário-->
 				<RowDefinition Height="Auto"/>
-				<!--Avaliação da matéria ou justificativa de ausência-->
+				<!--3 Avaliação da matéria ou justificativa de ausência-->
 				<RowDefinition Height="Auto"/>
-				<!--Atividade pendente-->
+				<!--4 Atividade pendente-->
 				<RowDefinition Height="Auto"/>
-				<!--Espaço vazio-->
+				<!--5 Espaço vazio-->
 				<RowDefinition Height="*"/>
-				<!--Botoes de avançar e retornar-->
+				<!--6 Botoes de avançar e retornar-->
 				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
+			<Label Grid.Row="0" Text="Nome da matéria" FontSize="30" />
+			<Label Grid.Row="1" Text="Nome do professor" FontSize="20" />
+			<Label Grid.Row="2" Text="Horário da aula" FontSize="20" />
+			<Label Grid.Row="3" Text="Avaliação da matéria" FontSize="20" />
+			<Label Grid.Row="4" Text="Atividades pendentes" FontSize="20" />
+			<!-- 5 é vazio-->
+			<Grid Grid.Row="6">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<Button Grid.Column="0" Text="Retornar" Command="{Binding ReturnPageCommand}" />
+				<Button Grid.Column="1" Text="Lançar no sistema" Command="{Binding AdvancePageCommand}" />
+			</Grid>
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>
+
+
+
 

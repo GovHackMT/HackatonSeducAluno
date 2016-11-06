@@ -10,6 +10,7 @@ namespace HackatonSeducAluno
 		{
 			// The root page of your application
 			MainPage = new LoginPage();
+			//MainPage = new DetalheDeAulaPage();
 		}
 
 		protected override void OnStart ()

@@ -51,7 +51,7 @@ namespace HackatonSeducAluno {
 				if (_advancePageCommand != null) {
 					return (_advancePageCommand = new Command((obj) => ExecuteAdvancePage(obj)));
 				} else {
-							return _advancePageCommand;
+					return _advancePageCommand;
 				}
 			
 			}
@@ -72,9 +72,12 @@ namespace HackatonSeducAluno {
 			throw new NotImplementedException();
 			}
 
-		void ExecuteAdvancePage(object obj) {
+		async void ExecuteAdvancePage(object obj) {
 			//Executar avançar página
-						throw new NotImplementedException();
-					}
-			}
+			//throw new NotImplementedException();
+			//await Navigation.PushAsync(new ConfirmaManutencaoPage(Equipamento, obj as Produto, Compartimento));
+			await Navigation.PushAsync(new DetalheDeAulaPage());
+
+		}
 	}
+}
