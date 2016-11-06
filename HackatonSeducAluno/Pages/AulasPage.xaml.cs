@@ -13,22 +13,16 @@ namespace HackatonSeducAluno
 			BindingContext = new AulasViewModel(Navigation);
 			InitializeComponent();
 
-			var aulas = new List<object>();
+			var aulas = new List<ListaDeAulas>();
 
-			aulas.Add(new object { });
-			aulas.Add(new object { });
-			aulas.Add(new object { });
-			aulas.Add(new object { });
-			aulas.Add(new object { });
-			aulas.Add(new object { });
-			aulas.Add(new object { });
-			aulas.Add(new object { });
-			aulas.Add(new object { });
-			aulas.Add(new object { });
-			aulas.Add(new object { });
+			aulas.Add(new ListaDeAulas { NomeDaMateria = "Matemática", NomeDoProfessor = "João Marcos" });
+			aulas.Add(new ListaDeAulas { NomeDaMateria = "Inglês", NomeDoProfessor = "Márcia Santos" });
+			aulas.Add(new ListaDeAulas { NomeDaMateria = "Biologia", NomeDoProfessor = "Antônio Medeiros" });
+			aulas.Add(new ListaDeAulas { NomeDaMateria = "Química", NomeDoProfessor = "Jairo Campos" });
+			aulas.Add(new ListaDeAulas { NomeDaMateria = "Física", NomeDoProfessor = "Adevair Lemos" });
 
 			ListaDeAulas.ItemsSource = aulas;
 		}
-		}
 	}
+}
 

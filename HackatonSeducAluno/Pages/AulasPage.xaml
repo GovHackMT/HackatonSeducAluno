@@ -8,8 +8,8 @@
 					<DataTemplate>
 						<ViewCell>
 							<StackLayout Orientation = "Vertical">
-								<Label Grid.Row="0" Text="NOME DA MATÉRIA" FontAttributes="Bold" FontSize="14" HorizontalOptions="Center" VerticalOptions="Center" />
-								<Label Grid.Row="1" Text="NOME DO PROFESSOR" FontSize="14" HorizontalOptions="Center" VerticalOptions="Center" />
+								<Label Grid.Row="0" Text="{Binding NomeDaMateria}" FontAttributes="Bold" FontSize="14" HorizontalOptions="Center" VerticalOptions="Center" />
+								<Label Grid.Row="1" Text="{Binding NomeDoProfessor}" FontSize="14" HorizontalOptions="Center" VerticalOptions="Center" />
 							</StackLayout>
 						</ViewCell>
 					</DataTemplate>

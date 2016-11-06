@@ -22,9 +22,8 @@ namespace HackatonSeducAluno
 		}
 
 		void OnLoginClick(object sender, System.EventArgs e) {
-			Application.Current.MainPage = new SideMenu();
+			Application.Current.MainPage = new SideMenu(EntradaDeLogin.Text);
 		}
-
 	}
 }
 

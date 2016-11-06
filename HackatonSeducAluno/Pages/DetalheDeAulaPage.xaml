@@ -18,11 +18,25 @@
 				<!--6 Botoes de avançar e retornar-->
 				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
-			<Label Grid.Row="0" Text="Nome da matéria" FontSize="30" />
-			<Label Grid.Row="1" Text="Nome do professor" FontSize="20" />
-			<Label Grid.Row="2" Text="Horário da aula" FontSize="20" />
-			<Label Grid.Row="3" Text="Avaliação da matéria" FontSize="20" />
-			<Label Grid.Row="4" Text="Atividades pendentes" FontSize="20" />
+			<Label Grid.Row="0" x:Name="NomeDaMateria" FontSize="30" />
+			<Label Grid.Row="1" x:Name="NomeDoProfessor" FontSize="20" />
+			<Label Grid.Row="2" Text="Horário da Aula: 15:30" FontSize="20" />
+			<Grid Grid.Row="3">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				<Label Grid.Row="0" Text="Avaliação da aula" FontSize="20" />
+				<Picker Grid.Row="1" x:Name="PickerDeNota" Title="Avaliação" />
+			</Grid>
+			<Grid Grid.Row="4">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				<Label Grid.Row="0" Text="Atividades pendentes" FontSize="20" />
+				<Editor Grid.Row="1" x:Name="EntryDeAtividades" IsEnabled="False" MinimumHeightRequest= "100" HeightRequest="100" />
+			</Grid>
 			<!-- 5 é vazio-->
 			<Grid Grid.Row="6">
 				<Grid.ColumnDefinitions>
@@ -30,7 +44,7 @@
 					<ColumnDefinition Width="*"/>
 				</Grid.ColumnDefinitions>
 				<Button Grid.Column="0" Text="Retornar" Command="{Binding ReturnPageCommand}" />
-				<Button Grid.Column="1" Text="Lançar no sistema" Command="{Binding AdvancePageCommand}" />
+				<Button Grid.Column="1" Text="Confirmar" Command="{Binding AdvancePageCommand}" />
 			</Grid>
 		</Grid>
 	</ContentPage.Content>

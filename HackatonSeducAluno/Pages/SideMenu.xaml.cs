@@ -10,8 +10,8 @@ using System.Linq;
 namespace HackatonSeducAluno
 {
 	public partial class SideMenu : MasterDetailPage {
-		public SideMenu (){
-			
+		public SideMenu (string NomeDoUsuario ){
+			BindingContext = new SideMenuViewModel(NomeDoUsuario, Navigation);
 			InitializeComponent ();
 			Detail = new NavigationPage(new  AulasPage());
 		}

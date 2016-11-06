@@ -3,12 +3,23 @@ using Xamarin.Forms;
 
 namespace HackatonSeducAluno {
 	public class DetalheDeAulasViewModel : BaseViewModel {
-		public DetalheDeAulasViewModel(INavigation Navigation) : base(Navigation) {
+		public DetalheDeAulasViewModel(ListaDeAulas AulaSelecionada, INavigation Navigation) : base(Navigation) {
 			
 		}
 
+		private ListaDeAulas _aulaSelecionada;
 		private Command _returnPageCommand;
 		private Command _advancePageCommand;
+
+		public ListaDeAulas AulaSelecionada {
+			get {
+				return _aulaSelecionada;
+			}
+			set {
+				_aulaSelecionada = value;
+				OnPropertyChanged("AulaSelecioada");
+			}
+		}
 
 		public Command AdvancePageCommand {
 			get {
