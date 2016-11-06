@@ -2,23 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:HackatonSeducAluno" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HackatonSeducAluno.AulasPage">
 	<ContentPage.Content>
 		<StackLayout Orientation="Vertical" >
-			<Label Text="Lista de aulas do dia" FontSize="30"/>
+			<Label Text="Lista de aulas do dia" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" />
 			<local:BindableListView x:Name="ListaDeAulas" ItemClickedCommand="{Binding AdvancePageCommand}" >
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>
-							<Grid Padding="5">
-									<Grid.RowDefinitions>
-										<RowDefinition Height="Auto"/>
-										<RowDefinition Height="Auto"/>
-									</Grid.RowDefinitions>
-									<Grid.ColumnDefinitions>
-										<ColumnDefinition Width="Auto"/>
-										<ColumnDefinition Width="*"/>
-									</Grid.ColumnDefinitions>
-									<Label Grid.Row="0" Text="NOME DA MATÉRIA" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center" />
-									<Label Grid.Row="1" Text="NOME DO PROFESSOR" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center" />
-								</Grid>
+							<StackLayout Orientation = "Vertical">
+								<Label Grid.Row="0" Text="NOME DA MATÉRIA" FontAttributes="Bold" FontSize="14" HorizontalOptions="Center" VerticalOptions="Center" />
+								<Label Grid.Row="1" Text="NOME DO PROFESSOR" FontSize="14" HorizontalOptions="Center" VerticalOptions="Center" />
+							</StackLayout>
 						</ViewCell>
 					</DataTemplate>
 				</ListView.ItemTemplate>

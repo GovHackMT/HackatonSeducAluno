@@ -14,6 +14,16 @@ namespace HackatonSeducAluno
 
 		}
 
+		void CleanCamps(Object sender, EventArgs e) {
+
+			EntradaDeLogin.Text = null;
+			EntradaDeSenha.Text = null;
+
+		}
+
+		void OnLoginClick(object sender, System.EventArgs e) {
+			Application.Current.MainPage = new SideMenu();
+		}
 
 	}
 }

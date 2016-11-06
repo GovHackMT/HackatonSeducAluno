@@ -19,8 +19,8 @@
 			<Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="Logo_Mato_Grosso" />
 			<Entry Grid.Row="1" x:Name="EntradaDeLogin" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Login" />
 			<Entry Grid.Row="2" x:Name="EntradaDeSenha" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Senha"/>
-			<Button Grid.Row="3" Grid.Column="0" Text="Limpar"/>
-			<Button Grid.Row="3" Grid.Column="1" Text="Entrar" />
+			<Button Grid.Row="3" Grid.Column="0" Text="Limpar" Clicked="CleanCamps" />
+			<Button Grid.Row="3" Grid.Column="1" Text="Entrar" Clicked="OnLoginClick" />
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>

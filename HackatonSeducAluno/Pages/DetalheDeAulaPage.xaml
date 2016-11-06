@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HackatonSeducAluno.DetalheDeAulaPage">
+	<ContentPage.Content>
+		<Grid>
+			<Grid.RowDefinitions>
+				<!--Nome da matéria-->
+				<RowDefinition Height="Auto"/>
+				<!--Nome do professor-->
+				<RowDefinition Height="Auto"/>
+				<!--horário-->
+				<RowDefinition Height="Auto"/>
+				<!--Avaliação da matéria ou justificativa de ausência-->
+				<RowDefinition Height="Auto"/>
+				<!--Atividade pendente-->
+				<RowDefinition Height="Auto"/>
+				<!--Espaço vazio-->
+				<RowDefinition Height="*"/>
+				<!--Botoes de avançar e retornar-->
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>
+
